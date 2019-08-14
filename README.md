@@ -1,6 +1,6 @@
 # Painel
 
-Este repositÃ³rio armazena os arquivos-fonte da pÃ¡gina Web e os subcomponentes necessÃ¡rios para fazer funcionar o painel interno do projeto MCR-Mesh. 
+Este repositório armazena os arquivos-fonte da página Web e os subcomponentes necessários para fazer funcionar o painel interno do projeto MCR-Mesh. 
 
-O painel interno o painel utilizado pelo usuÃ¡rio para acessar as informaÃ§es e executar comandos em sua rede Mesh, acessando a partir de sua rede interna. 
+O painel interno o painel utilizado pelo usuário para acessar as informações e executar comandos em sua rede Mesh, acessando a partir de sua rede interna. 
 

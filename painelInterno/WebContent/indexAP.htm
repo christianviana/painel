@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Update</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<!--=======================(  INCLUI FOLHA DE Jquery  )=====================-->		
+	<script type="text/javascript" src="jquery-3.3.1.min.js"></script>
+	
+	<!--=======================(  INCLUI FOLHA DE SCRIPT  )=====================-->	
+	<script type="text/javascript" src="javascriptUpdate.js"></script>
+	
+	<!--====================(  INCLUI BIBLIOTECA BOOTSTRAP )====================-->
+	<script type="text/javascript" src="bootstrap.min.js"></script>
+	
+	<!--================( FOLHA DE ESTILO CSS PARA O BOOTSTRAP )================-->
+	<link href="bootstrap.min.css" rel="stylesheet">
+	
+	<!--=====================(    FOLHA DE ESTILO CSS     )=====================-->
+	<link href="signin.css" rel="stylesheet">
+	
+</head>
+	
+<body class="text-center">
+	<form class="form-signin" action="/post" method="post" >
+      <img class="mb-4" src="../../assets/brand/bootstrap-solid.svg" alt="" width="72" height="72">
+      <h1 class="h3 mb-3 font-weight-normal">Configurações</h1>
+   
+      <!--============================(    CONFIGURA PARAMETROS REDE WIFI    )===============================-->
+      <label>Rede Wifi</label>
+      <label for="inputEmail" class="sr-only">Rede ssid</label>
+      <input type="text" id="inputRedeWiFi" class="form-control" name="ssidWiFi" placeholder="Rede ssid WiFi" required autofocus>
+
+      <label for="inputPasswordWiFi" class="sr-only">Password</label>
+      <input type="password" id="inputPassword" class="form-control" name="passWiFi" placeholder="Password WiFi" required>
+
+      <!--============================(    CONFIGURA PARAMETROS REDE MESH    )===============================-->
+      <label>Rede Mesh</label>
+      <label for="inputEmail" class="sr-only">Rede ssid</label>
+      <input type="text" id="inputRedeWiFi" class="form-control" name="ssidMesh"  placeholder="Mesh ssid" required autofocus>
+
+      <label for="inputPasswordWiFi" class="sr-only">Password</label>
+      <input type="password" id="inputPassword" class="form-control" name="passMesh" placeholder="Mesh Password " required>
+
+      <label for="inputEmail" class="sr-only">Port Mesh</label>
+      <input type="number" id="inputRedeWiFi" class="form-control" name="portMesh" placeholder="Mesh Port " required autofocus>
+
+      <label for="inputEmail" class="sr-only">Mesh Name</label>
+      <input type="text" id="inputRedeWiFi" class="form-control" name="nameMesh" placeholder="Mesh Name" required autofocus>
+      <br>
+      <button id="btn" class="btn btn-lg btn-primary btn-block" type="submit">Salvar</button>
+      <p class="mt-5 mb-3 text-muted">&copy; MPRV.LTDA</p>
+    </form>	
+</body>
+</html>

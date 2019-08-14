@@ -1,0 +1,8 @@
+{
+	"ssidWiFi":"ssid",
+	"passWiFi":"senha",
+	"ssidMesh":"whateverYouLike",
+	"passMesh":"somethingSneaky",
+	"portMesh":"5555",
+	"nameMesh":"ESP32"
+}

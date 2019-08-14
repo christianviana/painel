@@ -1,0 +1,5 @@
+{
+	"ESP32_001":{"Rede":"1234", "senha":"abcd"},
+ 	"ESP32_002":{"Rede":"4321", "senha":"ABCD"},
+ 	"ESP32_003":{"Rede":"5678", "senha":"efgh"}
+}

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html >
+<head>
+	<title>Projeto mesh</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+	<meta http-equiv="Pragma" content="no-cache" />
+	<meta http-equiv="Expires" content="0" />
+	
+	<!--=======================(  INCLUI FOLHA DE Jquery  )=====================-->		
+	<script type="text/javascript" src="jquery-3.3.1.min.js"></script>
+	
+	<!--=======================(  INCLUI FOLHA DE SCRIPT  )=====================-->	
+	<script type="text/javascript" src="javascript.js"></script>
+	
+	<!--====================(  INCLUI BIBLIOTECA BOOTSTRAP )====================-->
+	<script type="text/javascript" src="bootstrap.min.js"></script>
+	
+	<!--================( FOLHA DE ESTILO CSS PARA O BOOTSTRAP )================-->
+	<link href="bootstrap.min.css" rel="stylesheet">
+	
+	<!--=====================(    FOLHA DE ESTILO CSS     )=====================-->
+	<link href="estilo.css" rel="stylesheet">
+	
+</head>
+
+<body>	
+
+<!-- Nav pills -->
+<ul class="nav nav-pills">
+  <li class="nav-item">
+    <a class="nav-link active" data-toggle="pill" href="#home">Interruptores</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" data-toggle="pill" href="#menu1">Temperatura</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" data-toggle="pill" href="#menu2">Pressão</a>
+  </li>
+</ul>
+
+<!-- Tab panes -->
+<div class="tab-content">
+  <div class="tab-pane container active" id="home">
+ 
+	<div id="corpo" class="container-fluid">
+		<table class="table table-bordered">
+			<thead>
+				<tr>
+					<th>Local do ESP Mesh</th>
+					<th>Modelo do ESP</th>
+					<th>Estado do ESP</th>			
+				  	<th>Led</th>
+					<th>Temperatura</th>
+					<th>Pressão</th>
+					<th>SEQ</th>
+				</tr>
+			</thead>
+			<tbody id="tabela">
+				
+			</tbody>
+		</table>
+	</div>
+</div>
+ <div class="tab-pane container fade" id="menu1">...</div>
+  <div class="tab-pane container fade" id="menu2">...</div>
+</div>	
+	
+</body>
+</html>
