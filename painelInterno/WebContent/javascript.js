@@ -1,5 +1,5 @@
 //var ip  = "http://192.168.0.12";
-var ip = "/painelMesh";
+var ip = "/painelInterno";
 
 
 
