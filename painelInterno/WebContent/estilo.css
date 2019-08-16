@@ -3,8 +3,8 @@
 }
 .switch {
     display:inline-block;
-    width:60px;
-    height:30px;
+    width:30px;
+    height:60px;
     margin:8px;
     transform:translateY(50%);
     position:relative;
@@ -32,12 +32,12 @@
     height:100%;
     background:#777;
     border-radius:30px;
-    transform:translateX(-30px);
+    transform:translateY(-30px);
     transition:.4s;
 }
 
 input:checked + .slider:before {
-    transform:translateX(15px);
+    transform:translateY(15px);
     background:limeGreen;
 }
 input:checked + .slider {
