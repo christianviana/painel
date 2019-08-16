@@ -1,5 +1,4 @@
 //var ip  = "http://192.168.0.12";
-// teste de commit
 var ip = "/painelInterno";
 
 
