@@ -25,28 +25,46 @@
 	
 </head>
 
+
 <body>	
 
+<div class="container-fluid">
+<h2>Dispositivos da rede Mesh</h2>
 
-	<div id="corpo" class="container-fluid">
-		<table class="table table-bordered">
-			<thead>
-				<tr>
-					<th>Local do ESP Mesh</th>
-					<th>Modelo do ESP</th>
-					<th>Estado do ESP</th>			
-				  	<th>Led</th>
-					<th>Temperatura</th>
-					<th>Pressão</th>
-					<th>SEQ</th>
-				</tr>
-			</thead>
-			<tbody id="tabela">
-				
-			</tbody>
-		</table>
+	<!-- Nav pills -->
+	<ul class="nav nav-pills" >
+	  <li class="nav-item">
+	    <a class="nav-link active" data-toggle="pill" href="#interruptores">Interruptores</a>
+	  </li>
+	  <li class="nav-item">
+	    <a class="nav-link" data-toggle="pill" href="#temperatura">Temperatura</a>
+	  </li>
+	  <li class="nav-item">
+	    <a class="nav-link" data-toggle="pill" href="#pressao">Pressão</a>
+	  </li>
+	</ul>
+
+	<!-- Tab panes -->
+	<div class="tab-content container">
+		<div class="tab-pane container active" id="interruptores">
+	 	<div class="row" id="interruptoresRow">
+	 	</div>
+	 
+		</div>
+	 	
+	 	<div class="tab-pane container fade" id="temperatura">
+	    		
+	    </div>
+	 
+	 	<div class="tab-pane container fade" id="pressao">
+	  
+		</div>
+	
 	</div>
 
+</div>
+
+	
 	
 </body>
 </html>
