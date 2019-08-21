@@ -1,4 +1,29 @@
 
+.bnt1animado {
+	-webkit-animation-name: btnEsqAnimado; /* Safari 4.0 - 8.0 */
+  	-webkit-animation-duration: 2s; /* Safari 4.0 - 8.0 */
+	animation-name: btnEsqAnimado;	
+	animation-duration: 2s;
+}
+
+
+.bnt1animado::before {
+  background-color: transparent;
+  width: 3.0833em;
+}
+
+.bnt2animado {
+	-webkit-animation-name: btnDirAnimado; /* Safari 4.0 - 8.0 */
+  	-webkit-animation-duration: 2s; /* Safari 4.0 - 8.0 */
+	animation-name: btnDirAnimado;
+ 	animation-duration: 2s;  
+}
+
+
+.bnt2animado::before {  
+  background-color: #ccc;
+}
+
 
 /* Standard syntax */
 @keyframes btnEsqAnimado {
@@ -8,43 +33,50 @@
   left: 0.5em;
   height: 2.5em;
   width: 3em;
-  transform: rotate(0deg) skewX(0deg);  }
+  transform: rotate(0deg) skewX(0deg); 
+  }
 }
 
+
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes btnDirAnimado {  
+  to { /* background-color: #0084d0; */  
+  /*color: limegreen;*/
+  bottom: 0px;
+  left: 0.5em;
+  height: 2.5em;
+  width: 3em;
+  transform: rotate(0deg) skewX(0deg);  
+ }
+}
+
+/* Standard syntax */
 @keyframes btnDirAnimado {
-  to {background-color: #ddd;
+  to {
+  background-color: #ddd;
   color: #888;
   bottom: 0.4em;
   right: 0.8em;
   height: 2.4em;
   width: 2.75em;
-  transform: rotate(-15deg) skewX(-15deg);}
+  transform: rotate(-15deg) skewX(-15deg);
+  }
 }
 
-.bnt1animado {
-	animation-name: btnEsqAnimado;	
-	animation-duration: 0.5s;  
+
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes btnDirAnimado {
+  to {
+  background-color: #ddd;
+  color: #888;
+  bottom: 0.4em;
+  right: 0.8em;
+  height: 2.4em;
+  width: 2.75em;
+  transform: rotate(-15deg) skewX(-15deg);
+  }
 }
 
-.bnt2animado {
-	animation-name: btnDirAnimado;
- 	animation-duration: 0.5s;  
-}
-
-.teste2 {
--webkit-animation-name: example; /* Safari 4.0 - 8.0 */
-  -webkit-animation-duration: 4s; /* Safari 4.0 - 8.0 */
-  animation-name: example;
-  animation-duration: 4s;  
-
-}
-
-.botaoAnimadoLigado {
--webkit-animation-name: example; /* Safari 4.0 - 8.0 */
-  -webkit-animation-duration: 2s; /* Safari 4.0 - 8.0 */
-  animation-name: example;
-  animation-duration: 2s;
-}
 
 
 
