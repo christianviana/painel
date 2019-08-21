@@ -1,8 +1,19 @@
-
-
-
-
-
+html {
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
+  font-size: 100%;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+  margin:0;
+  padding:0;
+}
+.mid {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top:1em;
+}
 
 
 /* Switch starts here */
@@ -29,7 +40,7 @@
 }
 
 .rocker-small {
-  font-size: 0.65em; /* Sizes the switch */
+  font-size: 0.75em; /* Sizes the switch */
   margin: 1em;
 }
 
@@ -68,17 +79,17 @@
   width: 2.75em;
   left: 0.85em;
   bottom: 0.4em;
-  background-color: #ddd;  
+  background-color: #ddd;
   transform: rotate(15deg) skewX(15deg);
+   transition: 1s;
 }
 
 .switch-right {
   right: 0.5em;
   bottom: 0;
-/* background-color: #bd5757; */ 
-  background-color: #ddd;
-  color: #ccc;
-  }
+  background-color: #bd5757;
+  color: #fff;
+}
 
 .switch-left::before,
 .switch-right::before {
@@ -89,6 +100,7 @@
   bottom: -0.45em;
   background-color: #ccc;
   transform: skewY(-65deg);
+   transition: 1s;
 }
 
 .switch-left::before {
@@ -99,22 +111,54 @@
   right: -0.375em;
   background-color: transparent;
   transform: skewY(65deg);
+   transition: 1s;
 }
 
 input:checked + .switch-left {
-  /* background-color: #0084d0; */  
-  color: limegreen;
+  background-color: #0084d0;
+  color: #fff;
   bottom: 0px;
   left: 0.5em;
   height: 2.5em;
   width: 3em;
-  transform: rotate(0deg) skewX(0deg);  
+  transform: rotate(0deg) skewX(0deg);
+   transition: 1s;
 }
+
+input:active + .switch-left {
+  background-color: #0084d0;
+  color: #fff;
+  bottom: 0px;
+  left: 0.5em;
+  height: 2.5em;
+  width: 3em;
+  transform: rotate(0deg) skewX(0deg);
+   transition: 1s;
+}
+
+
+input:active + .switch-left {
+  background-color: #0084d0;
+  color: #fff;
+  bottom: 0px;
+  left: 0.5em;
+  height: 2.5em;
+  width: 3em;
+  transform: rotate(0deg) skewX(0deg);
+  transition: 1s;
+}
+
 
 input:checked + .switch-left::before {
   background-color: transparent;
   width: 3.0833em;
 }
+
+input:active + .switch-left::before {
+  background-color: transparent;
+  width: 3.0833em;
+}
+
 
 input:checked + .switch-left + .switch-right {
   background-color: #ddd;
@@ -124,10 +168,27 @@ input:checked + .switch-left + .switch-right {
   height: 2.4em;
   width: 2.75em;
   transform: rotate(-15deg) skewX(-15deg);
+   transition: 1s;
+}
+
+
+input:active + .switch-left + .switch-right {
+  background-color: #ddd;
+  color: #888;
+  bottom: 0.4em;
+  right: 0.8em;
+  height: 2.4em;
+  width: 2.75em;
+  transform: rotate(-15deg) skewX(-15deg);
+   transition: 1s;
 }
 
 
 input:checked + .switch-left + .switch-right::before {
+  background-color: #ccc;
+}
+
+input:active + .switch-left + .switch-right::before {
   background-color: #ccc;
 }
 
@@ -138,12 +199,15 @@ input:focus + .switch-left {
 }
 
 input:checked:focus + .switch-left {
-  color: limegreen;
+  color: #fff;
+}
+
+input:active:focus + .switch-left {
+  color: #fff;
 }
 
 input:focus + .switch-left + .switch-right {
   color: #fff;
-
 }
 
 input:checked:focus + .switch-left + .switch-right {
@@ -151,17 +215,6 @@ input:checked:focus + .switch-left + .switch-right {
 }
 
 
-
-.badge {
-  position: relative;
-  top: 16px;
-  right: 1px;
-  padding: 4px 4px;
-  border-radius: 50%;
-  background-color: red;
-  color: black;
-  /* transform: skewX(-15deg);*/
-  width: 10px;
-  height: 10px;
-  background-image:  url("http://i.stack.imgur.com/e2S63.png");
+input:active:focus + .switch-left + .switch-right {
+  color: #333;
 }
