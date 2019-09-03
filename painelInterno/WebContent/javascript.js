@@ -1,10 +1,5 @@
-//var ip  = "http://192.168.0.12";
-var ip = "/painelInterno";
-
-
-
-var paginaDeDados = ip + "/lerDados"
-var pagLigaLed = ip + "/ligarLed";
+var paginaDeDados = "lerDados"
+var pagLigaLed = "ligarLed";
 
 	
 // carrega primeira vez e configura página para recarregar automaticamente a cada 20s
@@ -17,6 +12,8 @@ $(document).ready(function(){
 function limpaECarregaTabela(){
 	$.ajax({url: paginaDeDados , success: function(result){
 		$("#interruptoresRow").html("");
+		$("#temperaturaRow").html("");
+		$("#pressaoRow").html("");
 		insereLinhas(result);
 	}, cache: false});
 }
@@ -27,7 +24,7 @@ function insereLinhas(result){
 	var qtd = pagina.Dispo.length; 
 	
 	for(var numLinha=0; numLinha<qtd; numLinha++){
-		
+	
 			var txtLinha  = '<div class="col-xs-">';
 			
 			// LED
@@ -46,8 +43,15 @@ function insereLinhas(result){
 			txtLinha += `<div class="text-center small" id=pLocal_${numLinha}>` + pagina.Dispo[numLinha].LOCAL + '</div>'; 
 		  	
 			txtLinha += '</div>';
+
 			
-		$("#interruptoresRow").append(txtLinha);
+			if (pagina.Dispo[numLinha].LED != '-') 
+				$("#interruptoresRow").append(txtLinha);
+			if (pagina.Dispo[numLinha].ADC1 != '-')
+				 $("#temperaturaRow").append(txtLinha);
+			if (pagina.Dispo[numLinha].ADC2 != '-')
+				$("#pressaoRow").append(txtLinha);
+			
 	
   }
 	
