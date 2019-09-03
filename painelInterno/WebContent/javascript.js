@@ -28,7 +28,7 @@ function insereLinhas(result){
 	
 	for(var numLinha=0; numLinha<qtd; numLinha++){
 		
-			var txtLinha  = '<div class=".col-sm-">';
+			var txtLinha  = '<div class="col-md">';
 
 			// Local
 			txtLinha += `<p id=pLocal_${numLinha}>` + pagina.Dispo[numLinha].LOCAL + '</p>'; 			
