@@ -28,11 +28,7 @@ function insereLinhas(result){
 	
 	for(var numLinha=0; numLinha<qtd; numLinha++){
 		
-			var txtLinha  = '<div class="col-md">';
-
-			// Local
-			txtLinha += `<p id=pLocal_${numLinha}>` + pagina.Dispo[numLinha].LOCAL + '</p>'; 			
-									
+			var txtLinha  = '<div class="col-xs-">';
 			
 			// LED
 		  	txtLinha += `<label id=tdBotao_${numLinha} class="rocker rocker-small">`;
@@ -45,7 +41,10 @@ function insereLinhas(result){
 		  	txtLinha += '><span class="switch-left">I</span>';
 		  	txtLinha += '<span class="switch-right">O</span>';
 		  	txtLinha += '</label>';
-			
+
+		  	// Local
+			txtLinha += `<p class="text-center small" id=pLocal_${numLinha}>` + pagina.Dispo[numLinha].LOCAL + '</p>'; 
+		  	
 			txtLinha += '</div>';
 			
 		$("#interruptoresRow").append(txtLinha);
