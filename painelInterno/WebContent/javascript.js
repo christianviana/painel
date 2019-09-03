@@ -43,7 +43,7 @@ function insereLinhas(result){
 		  	txtLinha += '</label>';
 
 		  	// Local
-			txtLinha += `<p class="text-center small" id=pLocal_${numLinha}>` + pagina.Dispo[numLinha].LOCAL + '</p>'; 
+			txtLinha += `<div class="text-center small" id=pLocal_${numLinha}>` + pagina.Dispo[numLinha].LOCAL + '</div>'; 
 		  	
 			txtLinha += '</div>';
 			
