@@ -8,17 +8,10 @@
 	<meta http-equiv="Pragma" content="no-cache" />
 	<meta http-equiv="Expires" content="0" />
 	
-	<!--=======================(  INCLUI FOLHA DE Jquery  )=====================-->		
-	<script type="text/javascript" src="jquery-3.3.1.min.js"></script>
 	
-	<!--=======================(  INCLUI FOLHA DE SCRIPT  )=====================-->	
-	<script type="text/javascript" src="javascript.js"></script>
-	
-	<!--====================(  INCLUI BIBLIOTECA BOOTSTRAP )====================-->
-	<script type="text/javascript" src="bootstrap.min.js"></script>
 	
 	<!--================( FOLHA DE ESTILO CSS PARA O BOOTSTRAP )================-->
-	<link href="bootstrap.min.css" rel="stylesheet">
+	<link href="bootstrap-3.4.0.min.css" rel="stylesheet">
 	
 	<!--=====================(    FOLHA DE ESTILO CSS     )=====================-->
 	<link href="estilo.css" rel="stylesheet">
@@ -28,13 +21,14 @@
 
 <body>	
 
-<div class="container-fluid">
-<h2>Dispositivos da rede Mesh</h2>
+<div class="container">
 
+<h2>Rede Mexerico</h2>
+<p>Nesta página estão listados os todos os dispositivos da sua instalação Mexerico.</p>
 	<!-- Nav pills -->
-	<ul class="nav nav-pills" >
-	  <li class="nav-item">
-	    <a class="nav-link active" data-toggle="pill" href="#interruptores">Interruptores</a>
+	<ul class="nav nav-tabs" >
+	  <li class="nav-item active">
+	    <a class="nav-link" data-toggle="pill" href="#interruptores">Interruptores</a>
 	  </li>
 	  <li class="nav-item">
 	    <a class="nav-link" data-toggle="pill" href="#temperatura">Temperatura</a>
@@ -42,28 +36,50 @@
 	  <li class="nav-item">
 	    <a class="nav-link" data-toggle="pill" href="#pressao">Pressão</a>
 	  </li>
+	  
 	</ul>
 
 	<!-- Tab panes -->
-	<div class="tab-content container">
-		<div class="tab-pane container active" id="interruptores">
-	 	<div class="row" id="interruptoresRow">
-	 	</div>
-	 
+	<div class="tab-content">
+		<div class="tab-pane active" id="interruptores">
+			<p> </p>
+		 	<h3>Interruptores</h3>
+			<p>Nesta seção estão listados os interruptores.</p>
+	 	
+	 		<div class="row" id="interruptoresRow">
+	 		</div>
 		</div>
 	 	
-	 	<div class="tab-pane container fade" id="temperatura">
-	    		
+	 	<div class="tab-pane fade" id="temperatura">
+			<p> </p>
+			<h3>Temperatura</h3>
+			<p>Nesta seção estão listados os sensores de temperatura.</p>	    			
+	 		<div class="row" id="temperaturaRow">
+	 		</div>
 	    </div>
 	 
-	 	<div class="tab-pane container fade" id="pressao">
-	  
+	 	<div class="tab-pane fade" id="pressao">
+			<p> </p>
+			<h3>Pressão</h3>
+			<p>Nesta seção estão listados os sensores de pressão.</p>	    		
+	 		<div class="row" id="pressaoRow">
+	 		</div>
 		</div>
 	
 	</div>
+	
+<hr>
 
 </div>
 
+	<!--=======================(  INCLUI BIBLIOTECA Jquery  )=====================-->		
+	<script type="text/javascript" src="jquery-3.4.1.min.js"></script>
+	
+	<!--=======================(  INCLUI JAVASCRIPT  )=====================-->	
+	<script type="text/javascript" src="javascript.js"></script>
+	
+	<!--====================(  INCLUI BIBLIOTECA BOOTSTRAP )====================-->
+	<script type="text/javascript" src="bootstrap-3.4.0.min.js"></script>
 	
 	
 </body>
