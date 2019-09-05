@@ -16,25 +16,34 @@
 	<!--=====================(    FOLHA DE ESTILO CSS     )=====================-->
 	<link href="estilo.css" rel="stylesheet">
 	
+	<script src="https://kit.fontawesome.com/c72e8f35d2.js"></script>
 </head>
-
-
 
 <body>	
 
 <div class="container">
-<h2>Painel Mexerico </h2>
+<h3> Painel Mexerico </h3>
 <p>Aqui estão listados os todos os dispositivos da sua instalação Mexerico.</p>
 	<!-- Nav pills -->
 	<ul class="nav nav-tabs" >
 	  <li class="nav-item active">
-	    <a class="nav-link active" data-toggle="pill" href="#interruptores">On/Off</a>
+	    <a class="nav-link active" data-toggle="pill" href="#interruptores">
+	    	<i class="fas fa-toggle-on"></i>
+	    	<span class="small"> On/Off</span>
+	    </a>
 	  </li>
 	  <li class="nav-item">
-	    <a class="nav-link" data-toggle="pill" href="#temperatura">Temperatura</a>
+	    <a class="nav-link" data-toggle="pill" href="#temperatura">
+	 		<i class="fas fa-thermometer-full"></i>
+	 		<span class="small"> Temperatura</span>
+	    	
+	    </a>
 	  </li>
 	  <li class="nav-item">
-	    <a class="nav-link" data-toggle="pill" href="#pressao">Pressão</a>
+	    <a class="nav-link" data-toggle="pill" href="#pressao" >
+		    <i class="fas fa-tachometer-alt"></i>
+	    	<span class="small"> Pressão</span>
+        </a>
 	  </li>
 	  
 	</ul>
@@ -43,7 +52,7 @@
 	<div class="tab-content">
 		<div class="tab-pane active" id="interruptores">
 			<p> </p>
-		 	<h3>Interruptores</h3>
+		 	<h4>Interruptores</h4>
 			<p>Nesta seção estão listados os interruptores.</p>
 	 	
 	 		<div class="row" id="interruptoresRow">
@@ -52,7 +61,7 @@
 	 	
 	 	<div class="tab-pane fade" id="temperatura">
 			<p> </p>
-			<h3>Temperatura</h3>
+			<h4>Temperatura</h4>
 			<p>Nesta seção estão listados os sensores de temperatura.</p>	    			
 	 		<div class="row" id="temperaturaRow">
 	 		</div>
@@ -60,7 +69,7 @@
 	 
 	 	<div class="tab-pane fade" id="pressao">
 			<p> </p>
-			<h3>Pressão</h3>
+			<h4>Pressão</h4>
 			<p>Nesta seção estão listados os sensores de pressão.</p>	    		
 	 		<div class="row" id="pressaoRow">
 	 		</div>
@@ -68,8 +77,6 @@
 	<hr>
 	</div>
 	
-
-
 </div>
 
 	<!--=======================(  INCLUI BIBLIOTECA Jquery  )=====================-->		

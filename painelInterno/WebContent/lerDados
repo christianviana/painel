@@ -9,7 +9,7 @@
 			"BOTAO": 1,
 			"LED": 0,
 			"ADC1": 32,
-			"ADC2": 1024,
+			"ADC2": 37,
 			"SETOR": "Pri"
 		},
 		{
@@ -33,7 +33,7 @@
 			"BOTAO": 1,
 			"LED": 1,
 			"ADC1": "-",
-			"ADC2": 1024,
+			"ADC2": 45,
 			"SETOR": "Pri"
 		},
 			{
