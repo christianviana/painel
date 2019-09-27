@@ -20,7 +20,7 @@
 			"ESTADO": 1,
 			"BOTAO": 0,
 			"LED": "-",
-			"ADC1": "1024",
+			"ADC1": "32",
 			"ADC2": "-",
 			"SETOR": "Pri"
 		},
@@ -55,7 +55,7 @@
 			"ESP_MOD": "ESP8266",
 			"ESTADO": 1,
 			"BOTAO": 1,
-			"LED": 0,
+			"LED": 1,
 			"ADC1": 35,
 			"ADC2": "-",
 			"SETOR": "Pri"
@@ -79,7 +79,7 @@
 			"ESP_MOD": "ESP8266",
 			"ESTADO": 1,
 			"BOTAO": 1,
-			"LED": 0,
+			"LED": 1,
 			"ADC1": 35,
 			"ADC2": 57,
 			"SETOR": "Pri"

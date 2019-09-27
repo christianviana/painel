@@ -39,17 +39,21 @@ function insereLinhas(result) {
 function criaInterruptor(dispo) {
 
 	var txtInterruptor = '<div class="col-xs- icone">';
+	txtInterruptor += '<label>';
+	txtInterruptor += '<button class="btn btn-dark btn-circle botao ';
+	
 	// LED
-	txtInterruptor += `<label id=ESP_${dispo.SEQ} class="rocker rocker-small">`;
-	txtInterruptor += '<input type="checkbox"';
 	if (dispo.LED == '1')
-		txtInterruptor += ' checked=true ';
-	txtInterruptor += `onclick="muda(this.id,${dispo.SEQ})"`;
-	txtInterruptor += '><span class="switch-left">I</span>';
-	txtInterruptor += '<span class="switch-right">O</span>';
+		txtInterruptor += ' ledLigado ';
+	
+	txtInterruptor += `" id=EspButton_${dispo.SEQ} onclick="muda(this.id,${dispo.SEQ})">`;
+	txtInterruptor += '<i class="fas fa-lightbulb"></i>';
+	txtInterruptor += '</button>';
 	txtInterruptor += '</label>';
 	// Local
-	txtInterruptor += `<p class="rotulo" id=pLocal_${dispo.SEQ}>` + dispo.LOCAL + '</p>';
+	txtInterruptor += '<p class="rotulo">'; 
+	txtInterruptor += ` ${dispo.LOCAL}`;			
+	txtInterruptor += ' </p>';
 	txtInterruptor += '</div>';
 	return txtInterruptor;
 
@@ -58,23 +62,27 @@ function criaInterruptor(dispo) {
 function criaInfoTemperatura(dispo) {
 	var txtInfoTemperatura = '<div class="col-xs- icone">';
 	txtInfoTemperatura += '<i class="fas fa-thermometer-full fa-2x"></i>';
-	txtInfoTemperatura += `<span id=ESP_${dispo.SEQ}>`;
+	txtInfoTemperatura += '<span>';
 	txtInfoTemperatura += ` ${dispo.ADC1}&#176;`;
 	txtInfoTemperatura += '</span>';
 	// Local
-	txtInfoTemperatura += `<p class="rotulo" id=pLocal_${dispo.SEQ}>` + dispo.LOCAL + ' </p>';
+	txtInfoTemperatura += '<p class="rotulo">'; 
+	txtInfoTemperatura += ` ${dispo.LOCAL}`;			
+	txtInfoTemperatura += ' </p>';
 	txtInfoTemperatura += '</div>';
 	return txtInfoTemperatura;
 }
 
 function criaInfoUmidade(dispo) {
 	var txtInfoUmidade = '<div class="col-xs- icone">';
-	txtInfoUmidade += '<i class="fas fa-tint fa-2x"></i>';;
-	txtInfoUmidade += `<span id=ESP_${dispo.SEQ}>`;
+	txtInfoUmidade += '<i class="fas fa-tint fa-2x"></i>';
+	txtInfoUmidade += '<span>';
 	txtInfoUmidade += ` ${dispo.ADC2}%`;
 	txtInfoUmidade += '</span>';
 	// Local
-	txtInfoUmidade += `<p class="rotulo" id=pLocal_${dispo.SEQ}>` + dispo.LOCAL + ' </p>';
+	txtInfoUmidade += '<p class="rotulo">'; 
+	txtInfoUmidade += ` ${dispo.LOCAL}`;	
+	txtInfoUmidade += ' </p>';	
 	txtInfoUmidade += '</div>';
 	return txtInfoUmidade;
 }
@@ -82,7 +90,9 @@ function criaInfoUmidade(dispo) {
 
 // Usa AJAX pra só recarregar o botão que mudou, e recarrega a página novamente em alguns segundos
 function muda(response, sequencia) {
-
+	
+	$(`#EspButton_${sequencia}`).toggleClass('ledLigado');
+	
 	var urlParaMudar = pagLigaLed + "?" + sequencia;
 	$.ajax({
 		url: urlParaMudar, success: function (result) {
