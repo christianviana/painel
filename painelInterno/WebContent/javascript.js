@@ -41,18 +41,18 @@ function criaInterruptor(dispo) {
 	var txtInterruptor = '<div class="col-xs- icone">';
 	txtInterruptor += '<label>';
 	txtInterruptor += '<button class="btn btn-dark btn-circle botao ';
-	
+
 	// LED
 	if (dispo.LED == '1')
 		txtInterruptor += ' ledLigado ';
-	
-	txtInterruptor += `" id=EspButton_${dispo.SEQ} onclick="muda(this.id,${dispo.SEQ})">`;
+
+	txtInterruptor += `" id=EspButton_${dispo.SEQ} onclick="this.disabled=true;muda(this.id,${dispo.SEQ})">`;
 	txtInterruptor += '<i class="fas fa-lightbulb"></i>';
 	txtInterruptor += '</button>';
 	txtInterruptor += '</label>';
 	// Local
-	txtInterruptor += '<p class="rotulo">'; 
-	txtInterruptor += ` ${dispo.LOCAL}`;			
+	txtInterruptor += '<p class="rotulo">';
+	txtInterruptor += ` ${dispo.LOCAL}`;
 	txtInterruptor += ' </p>';
 	txtInterruptor += '</div>';
 	return txtInterruptor;
@@ -66,8 +66,8 @@ function criaInfoTemperatura(dispo) {
 	txtInfoTemperatura += ` ${dispo.ADC1}&#176;`;
 	txtInfoTemperatura += '</span>';
 	// Local
-	txtInfoTemperatura += '<p class="rotulo">'; 
-	txtInfoTemperatura += ` ${dispo.LOCAL}`;			
+	txtInfoTemperatura += '<p class="rotulo">';
+	txtInfoTemperatura += ` ${dispo.LOCAL}`;
 	txtInfoTemperatura += ' </p>';
 	txtInfoTemperatura += '</div>';
 	return txtInfoTemperatura;
@@ -80,9 +80,9 @@ function criaInfoUmidade(dispo) {
 	txtInfoUmidade += ` ${dispo.ADC2}%`;
 	txtInfoUmidade += '</span>';
 	// Local
-	txtInfoUmidade += '<p class="rotulo">'; 
-	txtInfoUmidade += ` ${dispo.LOCAL}`;	
-	txtInfoUmidade += ' </p>';	
+	txtInfoUmidade += '<p class="rotulo">';
+	txtInfoUmidade += ` ${dispo.LOCAL}`;
+	txtInfoUmidade += ' </p>';
 	txtInfoUmidade += '</div>';
 	return txtInfoUmidade;
 }
@@ -90,9 +90,9 @@ function criaInfoUmidade(dispo) {
 
 // Usa AJAX pra só recarregar o botão que mudou, e recarrega a página novamente em alguns segundos
 function muda(response, sequencia) {
-	
+		
 	$(`#EspButton_${sequencia}`).toggleClass('ledLigado');
-	
+
 	var urlParaMudar = pagLigaLed + "?" + sequencia;
 	$.ajax({
 		url: urlParaMudar, success: function (result) {
