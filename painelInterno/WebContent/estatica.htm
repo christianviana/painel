@@ -59,23 +59,26 @@
 				<div class="row linha" id="interruptoresRow">
 
 					<div class="col-xs- icone">
-						<label id=ESP_0 class="rocker rocker-small">
-							<input type="checkbox" checked onclick="muda(this.id,0)">
-							<span class="switch-left">I</span>
-							<span class="switch-right">O</span>
-						</label>
-						<p class="rotulo" id=pLocal_0>Quarto 1</p>
-					</div>
-
-					<div>
 						<button class="btn btn-dark btn-circle botao ledLigado">
-						<span class="spinner-border spinner-border-sm"></span>
-						<i class="fas fa-lightbulb"></i>
+							<span class="spinner-border spinner-border-sm"></span>
+							<i class="fas fa-lightbulb"></i>
 						</button>
-
 						<p class="rotulo" id=pLocal_1>Quarto 2</p>
 					</div>
 
+					<div class="col-xs- icone">
+						<button class="btn btn-dark btn-circle botao ledLigado" id="teste" onclick="this.toggleClass('ledLigado')">
+							<i class="fas fa-lightbulb"></i>
+						</button>
+						<p class="rotulo" id=pLocal_1>Quarto 2</p>
+					</div>
+					<div class="col-xs- icone">
+						<button class="btn btn-dark btn-circle botao ledLigado">
+							<span class="spinner-border spinner-border-sm"></span>
+							<i class="fas fa-lightbulb"></i>
+						</button>
+						<p class="rotulo" id=pLocal_1>Quarto 2</p>
+					</div>
 				</div>
 			</div>
 
