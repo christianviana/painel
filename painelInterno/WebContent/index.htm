@@ -1,93 +1,85 @@
 <!DOCTYPE html>
-<html >
+<html>
+
 <head>
-	
+
 	<link rel="shortcut icon" href="favicon.png" type="image/x-icon" />
-	
+
 	<title>Painel de Controle Mexerico</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
 	<meta http-equiv="Pragma" content="no-cache" />
 	<meta http-equiv="Expires" content="0" />
-	
+
 	<!--================( FOLHA DE ESTILO CSS PARA O BOOTSTRAP )================-->
 	<link href="bootstrap-4.1.3.min.css" rel="stylesheet">
 	<!--=====================(    FOLHA DE ESTILO CSS     )=====================-->
 	<link href="estilo.css" rel="stylesheet">
-	
+
 	<script src="https://kit.fontawesome.com/c72e8f35d2.js"></script>
 </head>
 
-<body>	
+<body>
 
-<div class="container">
-<h3> Painel Mexerico </h3>
-<p>Aqui estão listados os todos os dispositivos da sua instalação Mexerico.</p>
-	<!-- Nav pills -->
-	<ul class="nav nav-tabs" >
-	  <li class="nav-item active">
-	    <a class="nav-link active" data-toggle="pill" href="#interruptores">
-	    	<i class="fas fa-toggle-on"></i>
-	    	<span class="small"> On/Off</span>
-	    </a>
-	  </li>
-	  <li class="nav-item">
-	    <a class="nav-link" data-toggle="pill" href="#temperatura">
-	 		<i class="fas fa-thermometer-full"></i>
-	 		<span class="small"> Temperatura</span>
-	    	
-	    </a>
-	  </li>
-	  <li class="nav-item">
-	    <a class="nav-link" data-toggle="pill" href="#pressao" >
-		    <i class="fas fa-tachometer-alt"></i>
-	    	<span class="small"> Pressão</span>
-        </a>
-	  </li>
-	  
-	</ul>
+	<div class="container">
+		<h3> Painel Mexerico </h3>
+		<p>Aqui estão listados os todos os dispositivos da sua instalação Mexerico.</p>
+		<!-- Nav pills -->
+		<ul class="nav nav-tabs">
+			<li class="nav-item active">
+				<a class="nav-link active" data-toggle="pill" href="#interruptores">
+					<i class="fas fa-toggle-on"></i>
+					<span class="small"> On/Off</span>
+				</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" data-toggle="pill" href="#temperatura">
+					<i class="fas fa-thermometer-full"></i>
+					<span class="small"> Temperatura</span>
 
-	<!-- Tab panes -->
-	<div class="tab-content">
-		<div class="tab-pane active" id="interruptores">
-			<p> </p>
-		 	<h4>Interruptores</h4>
-			<p>Nesta seção estão listados os interruptores.</p>
-	 	
-	 		<div class="row" id="interruptoresRow">
-	 		</div>
+				</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" data-toggle="pill" href="#umidade">
+					<i class="fas fa-tint"></i>
+					<span class="small"> Umidade</span>
+				</a>
+			</li>
+
+		</ul>
+
+		<!-- Tab panes -->
+		<div class="tab-content">
+			<div class="tab-pane active painel" id="interruptores">
+				<div class="row linha" id="interruptoresRow">
+				</div>
+			</div>
+
+			<div class="tab-pane fade painel" id="temperatura">
+				<div class="row linha" id="temperaturaRow">
+				</div>
+			</div>
+
+			<div class="tab-pane fade painel" id="umidade">
+				<div class="row linha" id="umidadeRow">
+				</div>
+			</div>
+			<hr>
 		</div>
-	 	
-	 	<div class="tab-pane fade" id="temperatura">
-			<p> </p>
-			<h4>Temperatura</h4>
-			<p>Nesta seção estão listados os sensores de temperatura.</p>	    			
-	 		<div class="row" id="temperaturaRow">
-	 		</div>
-	    </div>
-	 
-	 	<div class="tab-pane fade" id="pressao">
-			<p> </p>
-			<h4>Pressão</h4>
-			<p>Nesta seção estão listados os sensores de pressão.</p>	    		
-	 		<div class="row" id="pressaoRow">
-	 		</div>
-		</div>
-	<hr>
+
 	</div>
-	
-</div>
 
-	<!--=======================(  INCLUI BIBLIOTECA Jquery  )=====================-->		
+	<!--=======================(  INCLUI BIBLIOTECA Jquery  )=====================-->
 	<script type="text/javascript" src="jquery-3.4.1.min.js"></script>
-	
-	<!--=======================(  INCLUI JAVASCRIPT  )=====================-->	
+
+	<!--=======================(  INCLUI JAVASCRIPT  )=====================-->
 	<script type="text/javascript" src="javascript.js"></script>
-	
+
 	<!--====================(  INCLUI BIBLIOTECA BOOTSTRAP )====================-->
 	<script type="text/javascript" src="bootstrap-4.1.3.min.js"></script>
-	
-	
+
+
 </body>
+
 </html>
