@@ -35,7 +35,7 @@
 			</li>
 			<li class="nav-item">
 				<a class="nav-link" data-toggle="pill" href="#temperatura">
-					<i class="fas fa-thermometer-full fa-4x "></i>
+					<i class="fas fa-thermometer-full fa-2x "></i>
 					<!-- 	<span class="small"> Temperatura</span>  -->
 
 				</a>
@@ -51,117 +51,136 @@
 
 		<!-- Tab panes -->
 		<div class="tab-content">
-			<div class="tab-pane active" id="interruptores">
+			<div class="tab-pane active painel" id="interruptores">
 				<p> </p>
 				<h4>Interruptores</h4>
 				<p>Nesta seção são listados os interruptores.</p>
 
-				<div class="row" id="interruptoresRow">
-				</div>
-			</div>
+				<div class="row linha" id="interruptoresRow">
 
-			<div class="tab-pane fade temperaturaPane" id="temperatura">
-
-				<div class="row temperaturaRow" id="temperaturaRow">
-
-					<div class="col-xs- temperaturaIcon">
-						<i class="fas fa-thermometer-full fa-2x"></i>
-						<span id=ESP_1>
-							22
-						</span>
-						<p class="temperaturaLabel" id=pLocal_1>
-							Quarto 1
-						</p>
+					<div class="col-xs- icone">
+						<label id=ESP_0 class="rocker rocker-small">
+							<input type="checkbox" checked onclick="muda(this.id,0)">
+							<span class="switch-left">I</span>
+							<span class="switch-right">O</span>
+						</label>
+						<p class="rotulo" id=pLocal_0>Quarto 1</p>
 					</div>
 
-					<div class="col-xs- temperaturaIcon">
-						<i class="fas fa-thermometer-full fa-2x"></i>
-						<span id=ESP_1>
-							22&#176;
-						</span>
-						<p class="temperaturaLabel" id=pLocal_1>
-							Quarto 2
-						</p>
-					</div>
+					<div>
+						<button class="btn btn-dark btn-circle botao ledLigado">
+						<span class="spinner-border spinner-border-sm"></span>
+						<i class="fas fa-lightbulb"></i>
+						</button>
 
-					<div class="col-xs- temperaturaIcon">
-						<i class="fas fa-thermometer-full fa-2x"></i>
-						<span id=ESP_1>
-							22
-						</span>
-						<p class="temperaturaLabel" id=pLocal_1>
-							Quarto 3
-						</p>
-					</div>
-
-					<div class="col-xs- temperaturaIcon">
-						<i class="fas fa-thermometer-full fa-2x"></i>
-						<span id=ESP_1>
-							22
-						</span>
-						<p class="temperaturaLabel" id=pLocal_1>
-							Quarto 1
-						</p>
-					</div>
-
-					<div class="col-xs- temperaturaIcon">
-						<i class="fas fa-thermometer-full fa-2x"></i>
-						<span id=ESP_1>
-							22&#176;
-						</span>
-						<p class="temperaturaLabel" id=pLocal_1>
-							Quarto 2
-						</p>
-					</div>
-
-					<div class="col-xs- temperaturaIcon">
-						<i class="fas fa-thermometer-full fa-2x"></i>
-						<span id=ESP_1>
-							22
-						</span>
-						<p class="temperaturaLabel" id=pLocal_1>
-							Quarto 3
-						</p>
-					</div>
-
-					<div class="col-xs- temperaturaIcon">
-						<i class="fas fa-thermometer-full fa-2x"></i>
-						<span id=ESP_1>
-							22
-						</span>
-						<p class="temperaturaLabel" id=pLocal_1>
-							Quarto 1
-						</p>
-					</div>
-
-					<div class="col-xs- temperaturaIcon">
-						<i class="fas fa-thermometer-full fa-2x"></i>
-						<span id=ESP_1>
-							22&#176;
-						</span>
-						<p class="temperaturaLabel" id=pLocal_1>
-							Quarto 2
-						</p>
-					</div>
-
-					<div class="col-xs- temperaturaIcon">
-						<i class="fas fa-thermometer-full fa-2x"></i>
-						<span id=ESP_1>
-							22
-						</span>
-						<p class="temperaturaLabel" id=pLocal_1>
-							Quarto 3
-						</p>
+						<p class="rotulo" id=pLocal_1>Quarto 2</p>
 					</div>
 
 				</div>
 			</div>
 
-			<div class="tab-pane fade" id="umidade">
+			<div class="tab-pane fade painel" id="temperatura">
+
+				<div class="row linha" id="temperaturaRow">
+
+					<div class="col-xs- temperaturaIcon">
+						<i class="fas fa-thermometer-full fa-2x"></i>
+						<span id=ESP_1>
+							22
+						</span>
+						<p class="temperaturaLabel" id=pLocal_1>
+							Quarto 1
+						</p>
+					</div>
+
+					<div class="col-xs- temperaturaIcon">
+						<i class="fas fa-thermometer-full fa-2x"></i>
+						<span id=ESP_1>
+							22&#176;
+						</span>
+						<p class="temperaturaLabel" id=pLocal_1>
+							Quarto 2
+						</p>
+					</div>
+
+					<div class="col-xs- temperaturaIcon">
+						<i class="fas fa-thermometer-full fa-2x"></i>
+						<span id=ESP_1>
+							22
+						</span>
+						<p class="temperaturaLabel" id=pLocal_1>
+							Quarto 3
+						</p>
+					</div>
+
+					<div class="col-xs- temperaturaIcon">
+						<i class="fas fa-thermometer-full fa-2x"></i>
+						<span id=ESP_1>
+							22
+						</span>
+						<p class="temperaturaLabel" id=pLocal_1>
+							Quarto 1
+						</p>
+					</div>
+
+					<div class="col-xs- temperaturaIcon">
+						<i class="fas fa-thermometer-full fa-2x"></i>
+						<span id=ESP_1>
+							22&#176;
+						</span>
+						<p class="temperaturaLabel" id=pLocal_1>
+							Quarto 2
+						</p>
+					</div>
+
+					<div class="col-xs- temperaturaIcon">
+						<i class="fas fa-thermometer-full fa-2x"></i>
+						<span id=ESP_1>
+							22
+						</span>
+						<p class="temperaturaLabel" id=pLocal_1>
+							Quarto 3
+						</p>
+					</div>
+
+					<div class="col-xs- temperaturaIcon">
+						<i class="fas fa-thermometer-full fa-2x"></i>
+						<span id=ESP_1>
+							22
+						</span>
+						<p class="temperaturaLabel" id=pLocal_1>
+							Quarto 1
+						</p>
+					</div>
+
+					<div class="col-xs- temperaturaIcon">
+						<i class="fas fa-thermometer-full fa-2x"></i>
+						<span id=ESP_1>
+							22&#176;
+						</span>
+						<p class="temperaturaLabel" id=pLocal_1>
+							Quarto 2
+						</p>
+					</div>
+
+					<div class="col-xs- temperaturaIcon">
+						<i class="fas fa-thermometer-full fa-2x"></i>
+						<span id=ESP_1>
+							22
+						</span>
+						<p class="temperaturaLabel" id=pLocal_1>
+							Quarto 3
+						</p>
+					</div>
+
+				</div>
+			</div>
+
+			<div class="tab-pane fade painel" id="umidade">
 				<p> </p>
 				<h4>Umidade</h4>
 				<p>Nesta seção estão listados os sensores de umidade.</p>
-				<div class="row" id="umidadeRow">
+				<div class="row linha" id="umidadeRow">
 				</div>
 			</div>
 			<hr>
