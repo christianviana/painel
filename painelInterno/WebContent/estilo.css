@@ -3,24 +3,28 @@
 }
 
 .painel {
-  padding-top: 30px;
-  padding-bottom: 10px;
+  padding-top: 10px;  
+  padding-bottom: 5px;
+  padding-left: 15px;  
 }
 
 .linha {
-  text-align: center;
-  padding-left: 45px;
+  text-align: center;  
 }
 
 .icone {
-  padding-right: 30px;
+  padding-top: 25px;
+  padding-left: 25px;
+  padding-right: 25px;
   font-size: small;
-  padding-top: 10px;
+  font-weight:bold;
 }
 
 .rotulo {
-  padding-top: 5px;
+  padding-top: 10px;
+  font-weight:lighter;
 }
+
 
 
 
@@ -43,14 +47,12 @@
   text-transform: uppercase;
   color: #888;
   width: 7em;
-  height: 4em;
-  overflow: hidden;
+  height: 4em;  
   border-bottom: 0.5em solid #eee;
 }
 
 .rocker-small {
   font-size: 0.65em; /* Sizes the switch */
-  margin: 1em;
 }
 
 .rocker::before {
