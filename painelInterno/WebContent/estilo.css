@@ -43,14 +43,16 @@
 
 /* Safari 4.0 - 8.0 */
 @-webkit-keyframes animacaoPiscaLed {
-  from {color: black;}
-  to {color: yellow;}
+   0% {color: black;}
+  50% {color: yellow;}
+  100% {color: black;}
 }
 
 /* Standard syntax */
 @keyframes animacaoPiscaLed {
-  from {color: black;}
-  to {color: yellow;}
+  0% {color: black;}
+  50% {color: yellow;}
+  100% {color: black;}
 }
 
 
