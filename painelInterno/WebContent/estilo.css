@@ -32,10 +32,26 @@
 
 .ledLigado {
 	color: yellow;
-	padding-top: 100px;
+}
+
+.ledPiscando {
+  animation-name: animacaoPiscaLed;
+  animation-duration: 0.4s;
+  animation-iteration-count: infinite; 
 }
 
 
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes animacaoPiscaLed {
+  from {color: black;}
+  to {color: yellow;}
+}
+
+/* Standard syntax */
+@keyframes animacaoPiscaLed {
+  from {color: black;}
+  to {color: yellow;}
+}
 
 
 /* Switch starts here */

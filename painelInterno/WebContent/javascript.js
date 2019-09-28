@@ -39,9 +39,8 @@ function insereLinhas(result) {
 function criaInterruptor(dispo) {
 
 	var txtInterruptor = '<div class="col-xs- icone">';
-	txtInterruptor += '<label>';
+	
 	txtInterruptor += '<button class="btn btn-dark btn-circle botao ';
-
 	// LED
 	if (dispo.LED == '1')
 		txtInterruptor += ' ledLigado ';
@@ -49,7 +48,6 @@ function criaInterruptor(dispo) {
 	txtInterruptor += `" id=EspButton_${dispo.SEQ} onclick="this.disabled=true;muda(this.id,${dispo.SEQ})">`;
 	txtInterruptor += '<i class="fas fa-lightbulb"></i>';
 	txtInterruptor += '</button>';
-	txtInterruptor += '</label>';
 	// Local
 	txtInterruptor += '<p class="rotulo">';
 	txtInterruptor += ` ${dispo.LOCAL}`;
@@ -91,7 +89,7 @@ function criaInfoUmidade(dispo) {
 // Usa AJAX pra só recarregar o botão que mudou, e recarrega a página novamente em alguns segundos
 function muda(response, sequencia) {
 		
-	$(`#EspButton_${sequencia}`).toggleClass('ledLigado');
+	$(`#EspButton_${sequencia}`).toggleClass('ledPiscando');
 
 	var urlParaMudar = pagLigaLed + "?" + sequencia;
 	$.ajax({
