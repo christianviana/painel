@@ -102,8 +102,8 @@ function muda(response, sequencia) {
 
 	// Para melhor performance o ideal seria que o resultado da urlParaMudar trouxesse o novo estado do dispositivo que pediu para alterar
 
-	// Após ajustar o estado do LED, setta a página para recarregar em 1,5s, 
+	// Após ajustar o estado do LED, setta a página para recarregar em 0,5s, 
 	// para buscar novamente o estado do botão LED do servidor
 	// Este tempo pode ser necessário para que o estado se modifique no dispositivo remoto
-	setTimeout(function () { limpaECarregaTabela(); }, 1500);
+	setTimeout(function () { limpaECarregaTabela(); }, 500);
 }
