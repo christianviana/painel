@@ -28,6 +28,16 @@
 .botao {
 	border-radius: 8px;
 	width: 70px;
+	width: 40px;
+	height: 40px;
+}
+
+.botaoImagem {
+	width: 40px;
+	height: 40px;
+	border-width: 0px;
+	background-size: 40px;
+	background-image: url(botaoDesligado.png);
 }
 
 .ledLigado {
@@ -36,23 +46,47 @@
 
 .ledPiscando {
   animation-name: animacaoPiscaLed;
-  animation-duration: 0.4s;
+  animation-duration: 0.5s;
+  animation-iteration-count: infinite; 
+}
+
+.ledPiscandoBotao {
+  animation-name: animacaoComImagem;
+  animation-duration: 1.4s;
   animation-iteration-count: infinite; 
 }
 
 
-/* Safari 4.0 - 8.0 */
-@-webkit-keyframes animacaoPiscaLed {
-   0% {color: black;}
-  50% {color: yellow;}
-  100% {color: black;}
-}
 
 /* Standard syntax */
 @keyframes animacaoPiscaLed {
-  0% {color: black;}
-  50% {color: yellow;}
-  100% {color: black;}
+  0% {color:yellow;}   
+  50% {color:white;}
+  100% {color:yellow;}
 }
+
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes animacaoPiscaLed {
+ 0% {color:yellow;}   
+  50% {color:white;}
+  100% {color:yellow;}
+}
+
+/* Standard syntax */
+@keyframes animacaoComImagem {
+  0% { background-image: url(botaoLigado.png); }   
+  50% { background-image: url(botaoDesligado.png);}
+  100% { background-image: url("botaoLigado.png");}
+}
+
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes animacaoComImagem {
+  0% { background-image: url(botaoLigado.png); }   
+  50% { background-image: url(botaoDesligado.png);}
+  100% { background-image: url("botaoLigado.png");}
+}
+
+
+
 
 
