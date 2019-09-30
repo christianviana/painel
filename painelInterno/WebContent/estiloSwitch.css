@@ -1,3 +1,8 @@
+/*
+Classe CSS do Botão do tipo Switch. Foi adaptada do botão encontrado em:
+https://codepen.io/marcusconnor/pen/QJNvMa
+*/
+
 html {
   box-sizing: border-box;
   font-family: 'Arial', sans-serif;

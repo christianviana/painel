@@ -15,8 +15,7 @@
 .icone {
   padding-top: 20px;
   padding-left: 15px;
-  padding-right: 15px;
-  font-size: small;
+  padding-right: 15px;  
   font-weight:bold;
 }
 
@@ -31,6 +30,11 @@
 	width: 40px;
 	height: 40px;
 }
+
+.nav-menor-padding {
+	padding:.5rem 0.5rem
+}
+
 
 .botaoImagem {
 	width: 40px;
@@ -72,11 +76,11 @@
 }
 
 .bolaComum {
-	width: 45px;
+	width: 50px;
 	height: 12px;
 	background-size: 10px;
 	background-repeat: no-repeat;
-	background-position: 31px 2px;
+	background-position: 38px 2px;
 }
 
 .bolaFundoVerde {
