@@ -78,6 +78,7 @@ html {
   bottom: 0;
   font-weight: bold;
   color: #fff;
+  background-color: #c5c5c5;
 }
 
 .switch-left::before,
@@ -102,7 +103,7 @@ html {
 }
 
 input:checked + .switch-left {
-  background-color: #999;
+  background-color: #c5c5c5;
   color: #fff;
   bottom: 0px;
   left: 0.5em;
@@ -149,7 +150,7 @@ input:checked:focus + .switch-left + .switch-right {
 
 .switchPiscando {
   animation-name: animacaoPiscaSwitch;
-  animation-duration: 0.5s;
+  animation-duration: 1s;
   animation-iteration-count: infinite; 
 }
 

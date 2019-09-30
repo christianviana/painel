@@ -46,7 +46,7 @@
 
 .ledPiscando {
   animation-name: animacaoPiscaLed;
-  animation-duration: 0.5s;
+  animation-duration: 1s;
   animation-iteration-count: infinite; 
 }
 
@@ -56,6 +56,38 @@
   animation-iteration-count: infinite; 
 }
 
+.imgPiscando {
+  animation-name: animacaoImgPiscando;
+  animation-duration: 1s;
+  animation-iteration-count: infinite; 
+}
+
+.bola {
+	width: 40px;
+	height: 40px;
+	background-image: url(aqua-ball-green.jpg);
+	background-size: 10px;
+	background-repeat: no-repeat;
+	background-position: 23px 8px;
+}
+
+.bolaFundoVerde {
+	width: 40px;
+	height: 40px;
+	background-image: url(aqua-ball-green.jpg);
+	background-size: 10px;
+	background-repeat: no-repeat;
+	background-position: 20px 00px;
+}
+
+.bolaFundoVermelha {
+	width: 40px;
+	height: 40px;
+	background-image: url(aqua-ball-red.jpg);
+	background-size: 10px;
+	background-repeat: no-repeat;
+	background-position: 20px 00px;
+}
 
 
 /* Standard syntax */
@@ -76,16 +108,30 @@
 @keyframes animacaoComImagem {
   0% { background-image: url(botaoLigado.png); }   
   50% { background-image: url(botaoDesligado.png);}
-  100% { background-image: url("botaoLigado.png");}
+  100% { background-image: url(botaoLigado.png);}
 }
 
 /* Safari 4.0 - 8.0 */
 @-webkit-keyframes animacaoComImagem {
   0% { background-image: url(botaoLigado.png); }   
   50% { background-image: url(botaoDesligado.png);}
-  100% { background-image: url("botaoLigado.png");}
+  100% { background-image: url(botaoLigado.png);}
 }
 
+
+/* Standard syntax */
+@keyframes animacaoImgPiscando {
+  0% { background-image: url(aqua-ball-green.jpg); }   
+  50% { background-image: url(aqua-ball-red.jpg);}
+  100% { background-image: url(aqua-ball-green.jpg);}
+}
+
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes animacaoImgPiscando {
+  0% { background-image: url(aqua-ball-green.jpg); }   
+  50% { background-image: url(aqua-ball-red.jpg);}
+  100% { background-image: url(aqua-ball-green.jpg);}
+}
 
 
 

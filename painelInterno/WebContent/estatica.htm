@@ -17,6 +17,7 @@
 	<!--=====================(    FOLHA DE ESTILO CSS     )=====================-->
 	<link href="estilo.css" rel="stylesheet">
 	<link href="estiloSwitch.css" rel="stylesheet">
+	<link href="roundSwitch.css" rel="stylesheet">
 	<script src="https://kit.fontawesome.com/c72e8f35d2.js"></script>
 </head>
 
@@ -73,13 +74,49 @@
 					
 					<div class="col-xs- icone">
 					  <label class="rocker rocker-small">
-					    <input type="checkbox" onclick="this.disabled=true;$('#testew').toggleClass('switchPiscando');">
+					    <input type="checkbox" onclick="$('#testew').toggleClass('switchPiscando');">
 					    <span  id="testew" class="switch-left">I</span>
 					    <span class="switch-right">O</span>
 					  </label>					
 					  <p class="rotulo" id=pLocal_1>Quarto 3</p>
 					</div>
 					
+					<div class="col-xs- icone">
+					  <label class="rocker rocker-small">
+					    <input type="checkbox" onclick="$('#teste3').toggleClass('imgPiscando');">
+					    <span class="switch-left bola" id="teste3">I</span>
+					    <span class="switch-right">O</span>
+					  </label>					
+					  <p class="rotulo" id=pLocal_1>Quarto 4</p>
+					</div>
+					
+					<div class="col-xs- icone">
+					  <div class="bola" id="teste5" >
+					  </div>						
+					  <div>
+					  <label class="rocker rocker-small">
+					    <input type="checkbox" onclick="$('#teste5').toggleClass('imgPiscando');">
+					    <span class="switch-left">I</span>
+					    <span class="switch-right">O</span>
+					  </label>					
+					  <p class="rotulo" id=pLocal_1>Quarto 5</p>
+					  </div>
+					</div>
+					
+									
+					<div class="col-xs- icone">
+					  <span class="btn btn-info botao" id="teste6">
+							<i class="fas fa-lightbulb"></i>
+					  </span>
+					  <div>
+					  <label class="rocker rocker-small">
+					    <input type="checkbox" onclick="$('#teste6').toggleClass('ledPiscando');">
+					    <span  id="testew" class="switch-left">I</span>
+					    <span class="switch-right">O</span>
+					  </label>					
+					  <p class="rotulo" id=pLocal_1>Quarto 6</p>
+					  </div>
+					</div>
 					
 				</div>
 			</div>
@@ -124,18 +161,26 @@
 				</div>
 			</div>
 
-			<div class="tab-pane fade painel" id="umidade">
+			<div class="tab-pane fade painel painelUmidade" id="umidade">
 				<p> </p>
 				<h4>Umidade</h4>
 				<p>Nesta seção estão listados os sensores de umidade.</p>
 				<div class="row linha" id="umidadeRow">
+				
+					<div class="col-xs- icone">
+					<div class=round><input type=checkbox id=onoff name=onoff />
+					<div class=back><label class=but for=onoff><span class=on>I</span><span class=off>0</span></label></div></div>
+					 <p class="rotulo" id=pLocal_1>Quarto 6</p>
+					</div>
+				
+				
+				
 				</div>
+			
 			</div>
-			<hr>
-		</div>
 
 	</div>
-
+</div>
 	<!--=======================(  INCLUI BIBLIOTECA Jquery  )=====================-->
 	<script type="text/javascript" src="jquery-3.4.1.min.js"></script>
 

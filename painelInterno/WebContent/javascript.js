@@ -38,16 +38,20 @@ function insereLinhas(result) {
 
 function criaInterruptor(dispo) {
 
-	var txtInterruptor = '<div class="col-xs- icone">';
-	
-	txtInterruptor += '<button class="btn btn-dark botao ';
+	var txtInterruptor = "";
 	// LED
 	if (dispo.LED == '1')
-		txtInterruptor += ' ledLigado ';
-
-	txtInterruptor += `" id=EspButton_${dispo.SEQ} onclick="this.disabled=true;muda(this.id,${dispo.SEQ})">`;
-	txtInterruptor += '<i class="fas fa-lightbulb"></i>';
-	txtInterruptor += '</button>';
+		txtInterruptor += `<div class="bolaFundoVerde" id=EspButton_${dispo.SEQ} >`;
+	else 
+		txtInterruptor += `<div class="bolaFundoVermelha" id=EspButton_${dispo.SEQ} >`;
+	
+	txtInterruptor += '</div>';
+	txtInterruptor += '<div>';
+	txtInterruptor += '<label class="rocker rocker-small">';
+	txtInterruptor += `<input type="checkbox" onclick="this.disabled=true;muda(this.id,${dispo.SEQ})">`;
+	txtInterruptor += '<span class="switch-left">I</span>';
+	txtInterruptor += '<span class="switch-right">O</span>';
+	txtInterruptor += '</label>	';
 	// Local
 	txtInterruptor += '<p class="rotulo">';
 	txtInterruptor += ` ${dispo.LOCAL}`;
@@ -89,7 +93,8 @@ function criaInfoUmidade(dispo) {
 // Usa AJAX pra só recarregar o botão que mudou, e recarrega a página novamente em alguns segundos
 function muda(response, sequencia) {
 		
-	$(`#EspButton_${sequencia}`).toggleClass('ledPiscando');
+	//$(`#EspButton_${sequencia}`).toggleClass('ledPiscando');
+	$(`#EspButton_${sequencia}`).toggleClass('imgPiscando');
 
 	var urlParaMudar = pagLigaLed + "?" + sequencia;
 	$.ajax({
@@ -105,5 +110,5 @@ function muda(response, sequencia) {
 	// Após ajustar o estado do LED, setta a página para recarregar em 0,5s, 
 	// para buscar novamente o estado do botão LED do servidor
 	// Este tempo pode ser necessário para que o estado se modifique no dispositivo remoto
-	setTimeout(function () { limpaECarregaTabela(); }, 500);
+	setTimeout(function () { limpaECarregaTabela(); }, 2000);
 }
