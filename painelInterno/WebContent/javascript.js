@@ -38,17 +38,22 @@ function insereLinhas(result) {
 
 function criaInterruptor(dispo) {
 
-	var txtInterruptor = "";
+	var txtInterruptor = '<div class="col-xs- icone">';
 	// LED
 	if (dispo.LED == '1')
-		txtInterruptor += `<div class="bolaFundoVerde" id=EspButton_${dispo.SEQ} >`;
+		txtInterruptor += `<div class="bolaComum bolaFundoVerde" id=EspButton_${dispo.SEQ} >`;
 	else 
-		txtInterruptor += `<div class="bolaFundoVermelha" id=EspButton_${dispo.SEQ} >`;
+		txtInterruptor += `<div class="bolaComum bolaFundoVermelha" id=EspButton_${dispo.SEQ} >`;
 	
 	txtInterruptor += '</div>';
 	txtInterruptor += '<div>';
 	txtInterruptor += '<label class="rocker rocker-small">';
-	txtInterruptor += `<input type="checkbox" onclick="this.disabled=true;muda(this.id,${dispo.SEQ})">`;
+	txtInterruptor += '<input type="checkbox"'; 
+	
+	if (dispo.LED == '1')
+		txtInterruptor += ' checked=true ';
+	
+	txtInterruptor += `onclick="this.disabled=true;muda(this.id,${dispo.SEQ})">`;
 	txtInterruptor += '<span class="switch-left">I</span>';
 	txtInterruptor += '<span class="switch-right">O</span>';
 	txtInterruptor += '</label>	';
@@ -56,6 +61,7 @@ function criaInterruptor(dispo) {
 	txtInterruptor += '<p class="rotulo">';
 	txtInterruptor += ` ${dispo.LOCAL}`;
 	txtInterruptor += ' </p>';
+	txtInterruptor += '</div>';
 	txtInterruptor += '</div>';
 	return txtInterruptor;
 

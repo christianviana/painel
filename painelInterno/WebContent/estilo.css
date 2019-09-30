@@ -13,9 +13,9 @@
 }
 
 .icone {
-  padding-top: 25px;
-  padding-left: 25px;
-  padding-right: 25px;
+  padding-top: 20px;
+  padding-left: 15px;
+  padding-right: 15px;
   font-size: small;
   font-weight:bold;
 }
@@ -71,22 +71,20 @@
 	background-position: 23px 8px;
 }
 
-.bolaFundoVerde {
-	width: 40px;
-	height: 40px;
-	background-image: url(aqua-ball-green.jpg);
+.bolaComum {
+	width: 45px;
+	height: 12px;
 	background-size: 10px;
 	background-repeat: no-repeat;
-	background-position: 20px 00px;
+	background-position: 31px 2px;
+}
+
+.bolaFundoVerde {
+	background-image: url(aqua-ball-green.jpg);
 }
 
 .bolaFundoVermelha {
-	width: 40px;
-	height: 40px;
 	background-image: url(aqua-ball-red.jpg);
-	background-size: 10px;
-	background-repeat: no-repeat;
-	background-position: 20px 00px;
 }
 
 
