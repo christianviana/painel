@@ -10,6 +10,7 @@ $(document).ready(function () {
 
 
 function limpaECarregaTabela() {
+	console.log(dataFormatada() + 'carregando dados...');
 	$.ajax({
 		url: paginaDeDados, success: function (result) {
 			$("#interruptoresRow").html("");
@@ -98,13 +99,13 @@ function criaInfoUmidade(dispo) {
 
 // Usa AJAX pra só recarregar o botão que mudou
 function muda(sequencia) {
-
 	var urlParaMudar = pagLigaLed + "?" + sequencia;
+	console.log(dataFormatada() + 'clicou no botão de sequência ' + sequencia);
 	$.ajax({
 		url: urlParaMudar, success: function (result) {
 			$(`#EspButton_${sequencia}`).toggleClass('imgPiscando');
 			// Aqui é onde devem ser feitas as mudanças via Ajax para refletir a mudança de estado do LED no componente Web que o representar
-			console.log(result);
+			console.log(dataFormatada() + 'resposta do clique no botão de sequência ' + sequencia + ': ' + result);
 			var pagina = JSON.parse(result);
 			var qtd = pagina.Dispo.length;
 			// Por segurança, só altera se o resultado tem apenas um dispositivo, e com o mesmo sequencial que foi enviado
@@ -113,12 +114,18 @@ function muda(sequencia) {
 			}
 		}
 	});
+}
 
+function dataFormatada() {
+	var d = new Date();
+	var retorno = completaZerosEsquerda(d1.getHours()) + ':';
+	retorno += completaZerosEsquerda(d1.getMinutes()) + ':';
+	retorno += completaZerosEsquerda(d1.getSeconds()) + '.';
+	retorno += d1.getMilliseconds();
+	retorno += ' -> ';
+	return retorno;
+}
 
-	// Para melhor performance o ideal seria que o resultado da urlParaMudar trouxesse o novo estado do dispositivo que pediu para alterar
-
-	// Após ajustar o estado do LED, setta a página para recarregar em 0,5s, 
-	// para buscar novamente o estado do botão LED do servidor
-	// Este tempo pode ser necessário para que o estado se modifique no dispositivo remoto
-	//setTimeout(function () { limpaECarregaTabela(); }, 2000);
+function completaZerosEsquerda(numero) {
+	return numero < 10 ? '0'+ numero : numero;
 }
