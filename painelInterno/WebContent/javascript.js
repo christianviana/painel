@@ -19,6 +19,7 @@ function limpaECarregaTabela() {
 			insereLinhas(result);
 		}, cache: false
 	});
+	console.log(dataFormatada() + 'OK!');
 }
 
 

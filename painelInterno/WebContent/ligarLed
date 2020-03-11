@@ -1,15 +1,1 @@
-{
-    "Dispo": [
-		{
-			"SEQ": 2,
-			"MAC": 2484121542,
-			"LOCAL": "Quarto B",
-			"ESP_MOD": "ESP8266",
-			"ESTADO": 1,
-			"BOTAO": 0,
-			"LED": "0",
-			"ADC1": "-",
-			"ADC2": "-",
-			"SETOR": "Pri"
-		}	]
-}
+{"Dispo":[{"SEQ":3,"MAC":2484121542,"LOCAL":"QuartoC","ESP_MOD":"ESP8266","ESTADO":1,"BOTAO":1,"LED":0,"ADC1":29,"ADC2":80,"SETOR":"Ser"}]}
