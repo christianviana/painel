@@ -1,10 +1,15 @@
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="UTF-8">
-<title>Insert title here</title>
-</head>
-<body>
-Hello people
-</body>
-</html>
+{
+    "Dispo": [
+		{
+			"SEQ": 1,
+			"MAC": 2484121542,
+			"LOCAL": "Quarto B",
+			"ESP_MOD": "ESP8266",
+			"ESTADO": 1,
+			"BOTAO": 0,
+			"LED": "0",
+			"ADC1": "-",
+			"ADC2": "-",
+			"SETOR": "Pri"
+		}	]
+}

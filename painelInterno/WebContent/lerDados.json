@@ -1,0 +1,112 @@
+{
+	"Dispo": [
+		{
+			"SEQ": 0,
+			"MAC": 2484121542,
+			"LOCAL": "Quarto A",
+			"ESP_MOD": "ESP8266",
+			"ESTADO": 0,
+			"BOTAO": 1,
+			"LED": 0,
+			"ADC1": 32,
+			"ADC2": 37,
+			"SETOR": "Pri"
+		},
+		{
+			"SEQ": 1,
+			"MAC": 2484121542,
+			"LOCAL": "Quarto B",
+			"ESP_MOD": "ESP8266",
+			"ESTADO": 1,
+			"BOTAO": 0,
+			"LED": "-",
+			"ADC1": "32",
+			"ADC2": "-",
+			"SETOR": "Pri"
+		},
+		{
+			"SEQ": 2,
+			"MAC": 2484121542,
+			"LOCAL": "Quarto C",
+			"ESP_MOD": "ESP8266",
+			"ESTADO": 1,
+			"BOTAO": 1,
+			"LED": 1,
+			"ADC1": "-",
+			"ADC2": 45,
+			"SETOR": "Pri"
+		},
+			{
+			"SEQ": 3,
+			"MAC": 2484121542,
+			"LOCAL": "Quarto D",
+			"ESP_MOD": "ESP8266",
+			"ESTADO": 1,
+			"BOTAO": 1,
+			"LED": 0,
+			"ADC1": 35,
+			"ADC2": 57,
+			"SETOR": "Pri"
+		},
+			{
+			"SEQ": 4,
+			"MAC": 2484121542,
+			"LOCAL": "Quarto E",
+			"ESP_MOD": "ESP8266",
+			"ESTADO": 1,
+			"BOTAO": 1,
+			"LED": 1,
+			"ADC1": 35,
+			"ADC2": "-",
+			"SETOR": "Pri"
+		},
+			{
+			"SEQ": 5,
+			"MAC": 2484121542,
+			"LOCAL": "Quarto F",
+			"ESP_MOD": "ESP8266",
+			"ESTADO": 1,
+			"BOTAO": 1,
+			"LED": 0,
+			"ADC1": 35,
+			"ADC2": 57,
+			"SETOR": "Pri"
+		},
+			{
+			"SEQ": 6,
+			"MAC": 2484121542,
+			"LOCAL": "Quarto G",
+			"ESP_MOD": "ESP8266",
+			"ESTADO": 1,
+			"BOTAO": 1,
+			"LED": 1,
+			"ADC1": 35,
+			"ADC2": 57,
+			"SETOR": "Pri"
+		},
+			{
+			"SEQ": 7,
+			"MAC": 2484121542,
+			"LOCAL": "Quarto H",
+			"ESP_MOD": "ESP8266",
+			"ESTADO": 1,
+			"BOTAO": 1,
+			"LED": 0,
+			"ADC1": "-",
+			"ADC2": 57,
+			"SETOR": "Pri"
+		},
+			{
+			"SEQ": 8,
+			"MAC": 2484121542,
+			"LOCAL": "Quarto I",
+			"ESP_MOD": "ESP8266",
+			"ESTADO": 1,
+			"BOTAO": 1,
+			"LED": 0,
+			"ADC1": "-",
+			"ADC2": "-",
+			"SETOR": "Pri"
+		}
+	]
+}
