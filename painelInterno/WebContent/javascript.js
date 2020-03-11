@@ -118,10 +118,10 @@ function muda(sequencia) {
 
 function dataFormatada() {
 	var d = new Date();
-	var retorno = completaZerosEsquerda(d1.getHours()) + ':';
-	retorno += completaZerosEsquerda(d1.getMinutes()) + ':';
-	retorno += completaZerosEsquerda(d1.getSeconds()) + '.';
-	retorno += d1.getMilliseconds();
+	var retorno = completaZerosEsquerda(d.getHours()) + ':';
+	retorno += completaZerosEsquerda(d.getMinutes()) + ':';
+	retorno += completaZerosEsquerda(d.getSeconds()) + '.';
+	retorno += d.getMilliseconds();
 	retorno += ' -> ';
 	return retorno;
 }
