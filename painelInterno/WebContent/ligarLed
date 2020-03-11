@@ -1,11 +1,7 @@
 {
     "Dispo": [
 		{
-<<<<<<< HEAD
 			"SEQ": 2,
-=======
-			"SEQ": 1,
->>>>>>> c2ccb41a2cda5f737dde8fbfc63674cd8ff2f92a
 			"MAC": 2484121542,
 			"LOCAL": "Quarto B",
 			"ESP_MOD": "ESP8266",
