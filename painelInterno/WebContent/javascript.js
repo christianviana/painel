@@ -98,7 +98,7 @@ function criaInfoUmidade(dispo) {
 
 // Usa AJAX pra só recarregar o botão que mudou
 function muda(sequencia) {
-	
+
 	var urlParaMudar = pagLigaLed + "?" + sequencia;
 	$.ajax({
 		url: urlParaMudar, success: function (result) {
