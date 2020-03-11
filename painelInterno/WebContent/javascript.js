@@ -38,22 +38,22 @@ function insereLinhas(result) {
 
 function criaInterruptor(dispo) {
 
-	var txtInterruptor = '<div class="col-xs- icone">';
+	var txtInterruptor = `<div id=Botao_${dispo.SEQ} class="col-xs- icone">`;
 	// LED
 	if (dispo.LED == '1')
 		txtInterruptor += `<div class="bolaComum bolaFundoVerde" id=EspButton_${dispo.SEQ} >`;
-	else 
+	else
 		txtInterruptor += `<div class="bolaComum bolaFundoVermelha" id=EspButton_${dispo.SEQ} >`;
-	
+
 	txtInterruptor += '</div>';
 	txtInterruptor += '<div>';
 	txtInterruptor += '<label class="rocker rocker-small">';
-	txtInterruptor += '<input type="checkbox"'; 
-	
+	txtInterruptor += '<input type="checkbox"';
+
 	if (dispo.LED == '1')
 		txtInterruptor += ' checked=true ';
-	
-	txtInterruptor += `onclick="this.disabled=true;muda(this.id,${dispo.SEQ})">`;
+
+	txtInterruptor += `onclick="muda(${dispo.SEQ})">`;
 	txtInterruptor += '<span class="switch-left">I</span>';
 	txtInterruptor += '<span class="switch-right">O</span>';
 	txtInterruptor += '</label>	';
@@ -96,25 +96,29 @@ function criaInfoUmidade(dispo) {
 }
 
 
-// Usa AJAX pra só recarregar o botão que mudou, e recarrega a página novamente em alguns segundos
-function muda(response, sequencia) {
-		
-	//$(`#EspButton_${sequencia}`).toggleClass('ledPiscando');
-	$(`#EspButton_${sequencia}`).toggleClass('imgPiscando');
-
+// Usa AJAX pra só recarregar o botão que mudou
+function muda(sequencia) {
+	
 	var urlParaMudar = pagLigaLed + "?" + sequencia;
 	$.ajax({
 		url: urlParaMudar, success: function (result) {
-			// Aqui é onde devem ser feitas as mudanças via Ajax para refletir a mudança de estado do LED no componente Web que o representar		
-			// Exemplo:
-			//$(`#tdLocal_${sequencia}`).html(`Quarto ${sequencia}`);
+			$(`#EspButton_${sequencia}`).toggleClass('imgPiscando');
+			// Aqui é onde devem ser feitas as mudanças via Ajax para refletir a mudança de estado do LED no componente Web que o representar
+			console.log(result);
+			var pagina = JSON.parse(result);
+			var qtd = pagina.Dispo.length;
+			// Por segurança, só altera se o resultado tem apenas um dispositivo, e com o mesmo sequencial que foi enviado
+			if (qtd === 1 && sequencia === pagina.Dispo[0].SEQ) {
+				$(`#Botao_${sequencia}`).replaceWith(criaInterruptor(pagina.Dispo[0]));
+			}
 		}
 	});
+
 
 	// Para melhor performance o ideal seria que o resultado da urlParaMudar trouxesse o novo estado do dispositivo que pediu para alterar
 
 	// Após ajustar o estado do LED, setta a página para recarregar em 0,5s, 
 	// para buscar novamente o estado do botão LED do servidor
 	// Este tempo pode ser necessário para que o estado se modifique no dispositivo remoto
-	setTimeout(function () { limpaECarregaTabela(); }, 2000);
+	//setTimeout(function () { limpaECarregaTabela(); }, 2000);
 }
