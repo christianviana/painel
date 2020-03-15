@@ -55,7 +55,7 @@ function criaInterruptor(dispo) {
 	if (dispo.LED == '1')
 		txtInterruptor += ' checked=true ';
 
-	txtInterruptor += `onclick="muda(${dispo.SEQ})">`;
+	txtInterruptor += `onclick="this.disabled=true;muda(${dispo.SEQ})">`;
 	txtInterruptor += '<span class="switch-left">I</span>';
 	txtInterruptor += '<span class="switch-right">O</span>';
 	txtInterruptor += '</label>	';
@@ -100,21 +100,25 @@ function criaInfoUmidade(dispo) {
 
 // Usa AJAX pra só recarregar o botão que mudou
 function muda(sequencia) {
-	var urlParaMudar = pagLigaLed + "?" + sequencia;
 	console.log(dataFormatada() + 'clicou no botão de sequência ' + sequencia);
+	var urlParaMudar = pagLigaLed + "?" + sequencia;
+	$(`#EspButton_${sequencia}`).toggleClass('imgPiscando');
 	$.ajax({
 		url: urlParaMudar, success: function (result) {
-			$(`#EspButton_${sequencia}`).toggleClass('imgPiscando');
-			// Aqui é onde devem ser feitas as mudanças via Ajax para refletir a mudança de estado do LED no componente Web que o representar
+			//$(`#EspButton_${sequencia}`).toggleClass('imgPiscando');
+			// Aqui é onde podem ser feitas as mudanças via Ajax para refletir a mudança de estado do LED no componente Web que o representar
 			console.log(dataFormatada() + 'resposta do clique no botão de sequência ' + sequencia + ': ' + result);
-			var pagina = JSON.parse(result);
-			var qtd = pagina.Dispo.length;
+			//var pagina = JSON.parse(result);
+			//var qtd = pagina.Dispo.length;
 			// Por segurança, só altera se o resultado tem apenas um dispositivo, e com o mesmo sequencial que foi enviado
-			if (qtd === 1 && sequencia === pagina.Dispo[0].SEQ) {
-				$(`#Botao_${sequencia}`).replaceWith(criaInterruptor(pagina.Dispo[0]));
+			//if (qtd === 1 && sequencia === pagina.Dispo[0].SEQ) {
+			//	$(`#Botao_${sequencia}`).replaceWith(criaInterruptor(pagina.Dispo[0]));
 			}
-		}
 	});
+	// Após ajustar o estado do LED, setta a página para recarregar em 0,5s, 
+	// para buscar novamente o estado do botão LED do servidor
+	// Este tempo pode ser necessário para que o estado se modifique no dispositivo remoto
+	setTimeout(function () { limpaECarregaTabela(); }, 2000);
 }
 
 function dataFormatada() {
